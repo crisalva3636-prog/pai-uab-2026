@@ -1,18 +1,6 @@
-!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<script type=“text/javascript” SRC=“elMeuCodi.js”></script>
-
-<body>
- <script type=“text/javascript”>
-<h1>ejercicios de javascrip<h1>
-</script>  
-<h2>Noms de variables</h2>
-<h2>1.1</h2>
+ 
+// Noms de variables
+// 1.1
 //1. variAble
 2. Variable (correcto)
 3. vari-able (correcto)
@@ -24,22 +12,22 @@
 9. variable4 (correcto)
 10.variable_4 (incorrecto)
 11.LaMevaVariable (incorrecto)//
-<h2>1.2</h2>
+// 1.2
 //el resultado es el primero nomempleat//
-<h2>1. variAble
-2. Variable
-3. vari-able
-4. vari_able
-5. _variable
-6. vari.able
-7. vari4able
-8. 4variable
-9. variable4
-10.variable_4
-<h2>Declaració</h2>
-var a = 1;
-var a = 2;
-console.log(a);
+// 1. variAble
+// 2. Variable
+// 3. vari-able
+// 4. vari_able
+// 5. _variable
+// 6. vari.able
+// 7. vari4able
+// 8. 4variable
+// 9. variable4
+// 10.variable_4
+// 11.LaMevaVariable
+// 1.2
+//el resultado es el primero nomempleat//
+// 1. variAble
 var a = 1;
 let a = 2;
 console.log(a);
