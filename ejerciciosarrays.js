@@ -16,6 +16,7 @@ array[2] = "Nom";
 // ● Escrigui a la consola el contingut de la taula.
 console.log(array);
 // ● Modifiqui el valor emmagatzamat a la posició 0.
+
 array[0] = "Benvolgut";
 
 // 21.3.- Fes un programa que faci el següent:
