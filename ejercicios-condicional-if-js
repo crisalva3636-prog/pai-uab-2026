@@ -138,6 +138,7 @@ let numero3=parseInt(prompt("Introdueix el tercer número:"));
 // valor que ha sortit a la prova d’alcoholèmia. El programa ha de respondre que sí pot conduir
 // si té carnet de conduir i la prova d’alcoholèmia ha donat un valor inferior a 0.25
 
+
 // 13.7.- Escriu un programa que, donat dos números llegits amb prompt, escrigui a la consola
 // el resultat de restar al nombre més gran el nombre més petit.
 
@@ -148,9 +149,9 @@ let numero3=parseInt(prompt("Introdueix el tercer número:"));
 
 
 // 14.9.- Un usuari va a una gelateria i per calcular el cost del seu gelat té un ordinador on
-posa dues dades:
-1. Si vol un conus (c) o una terrina (t). El conus té un cost base de 3.45 i la terrina de
-3.95
+// posa dues dades:
+//1. Si vol un conus (c) o una terrina (t). El conus té un cost base de 3.45 i la terrina de
+//3.95
 2. Quin d’aquests sabors vol:
 1. Vainilla o Xocolata. No cal afegir res
 2. Turró, Menta o Oreo. Caldrà afegir 0.5 al preu final.
