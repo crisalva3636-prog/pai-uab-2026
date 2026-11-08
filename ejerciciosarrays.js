@@ -231,6 +231,83 @@ for (let i = 0; i < taulaA.length; i++) {
 
 console.log(taulaUnida);
 
+//21.20.- Fes un programa que, donada una taula i un valor, crei una nova taula sense el valor
+//proporcionat.
+
+let taulaOriginal = [1, 2, 3, 4, 5, 3, 6];
+let valorAEliminar = parseInt(prompt("Introdueix un valor a eliminar de la taula:"));
+let taulaFiltrada = [];     
+
+for (let i = 0; i < taulaOriginal.length; i++) {
+    if (taulaOriginal[i] !== valorAEliminar) {
+        taulaFiltrada.push(taulaOriginal[i]);  
+    }   
+
+}
+console.log(taulaFiltrada);
+
+//21.21.- Fes un programa que, donada una taula i una posició, guardi a una altra taula la
+//taula inicial, però des de la posició donada fins al final. Per exemple
+//[1,2,3,5,6,7,8,9,0] i 4 → [6,7,8,9,0]
+
+let taulaInicial = [1, 2, 3, 5, 6, 7, 8, 9, 0];
+let posicio = parseInt(prompt("Introdueix una posició:"));
+let taulaResultat = [];
+
+for (let i = posicio; i < taulaInicial.length; i++) {
+    taulaResultat.push(taulaInicial[i]);
+}
+
+console.log(taulaResultat);
+
+//21.22.- Fes un programa que, donada una taula escrigui a la pantalla el primer número que
+//estigui repetit.
+
+let taulaDada = [1, 2, 3, 4, 2, 5, 6, 3];
+let primerRepetit = null;   
+for (let i = 0; i < taulaDada.length; i++) {
+    for (let j = i + 1; j < taulaDada.length; j++) {
+        if (taulaDada[i] === taulaDada[j]) {
+            primerRepetit = taulaDada[i];  
+            break;  
+        }
+    }   
+    if (primerRepetit !== null) {
+        break;
+    }
+}                                   
+
+if (primerRepetit !== null) {
+    console.log("El primer número repetit és:", primerRepetit);
+} else 
+    {
+     console.log("No hi ha números repetits a la taula.")
+
+//Exercici amb objectes
+//Tenim aquesta definició de l’objecte cotxe i dues variables:
+//function Auto(marca, modelo, potencia, antiguedad , precio) {
+ //this.marca = marca;
+ //this.modelo = modelo;
+ //this.potencia = potencia;
+ //this.antiguedad = antiguedad;
+ //this.precio = precio;
+//}
+//let miAuto = new Auto("Seat","Ibiza",90,2010,5000);
+//let otroAuto = new Auto("Opel","Astra",92,1995,500);
+//21.23.- Fes un programa que et digui el model i la marca del vehicle més antic.
+
+let autoMesAntic = miAuto;
+if (otroAuto.antiguedad < autoMesAntic.antiguedad) {
+    autoMesAntic = otroAuto;
+}       
+
+console.log("El vehicle més antic és un " + autoMesAntic.marca + " " + autoMesAntic.modelo + " de l'any " + autoMesAntic.antiguedad);
+
+
+
+
+
+
 
     
 
