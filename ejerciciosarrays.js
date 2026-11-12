@@ -26,7 +26,7 @@ array = [23,45,98,73];
 console.log(array[0] + array[2]);
 // ● Guardi a la posició 6 de la taula la suma dels elements
 array[6] = array[0] + array[2];
-// ● Escrigui a la consola el contingut de la taula. Què passa a la posició 5?
+let suma = array[0] + array[2];
 console.log(array);
 //21.4.- Fes un programa que, donat un número (que demanarem per pantalla fent servir
 //prompt()) emmagatzemi a una taula el doble i el triple d’aquest número. Un cop fet, escriu la
@@ -53,7 +53,7 @@ console.log(operacions);
 //let taula = [23,45,63,78,23,68,3,78,32,53,93,21,53,5,62,78];
 //Fes un programa que escrigui a la consola els valors situats a la primera i la darrera posició
 //de la taula.
-*****
+// *****
 //Donada la definició d’aquesta taula:
 let taula = [23,45,63,78,23,68,3,78,32,53,93,21,53,5,62,78];
 
@@ -302,20 +302,3 @@ if (otroAuto.antiguedad < autoMesAntic.antiguedad) {
 }       
 
 console.log("El vehicle més antic és un " + autoMesAntic.marca + " " + autoMesAntic.modelo + " de l'any " + autoMesAntic.antiguedad);
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
