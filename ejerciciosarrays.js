@@ -1,33 +1,38 @@
 // 21.1.- Fes un programa que faci el següent:
 // ● Defineix una variable de tipus taula, buida.
-let array = [10];
+let taula = [10];
+console.log(taula);
+
 // ● Afegeixi el valor “Hola” a la posició 0
-array[0] = "Hola";
+taula[0] = "Hola";
 // ● Afegeixi el valor “Adeu” a la posició 1.
-array[1] = "Adeu";
+taula[1] = "Adeu";
 // ● Escrigui a la consola el contingut de la taula
-console.log(array);
+let taula = ["Hola", "Adeu"];
+console.log(taula);
 
 // 21.2.- Al programa anterior, afegeix les instruccions necessàries (després del console.log())
 // per a fer el següent:
 
 // ● Afegeixi el valor “Nom” a la posició 2 de la taula.
-array[2] = "Nom";
+taula[2] = "Nom";
+console.log(taula);
 // ● Escrigui a la consola el contingut de la taula.
-console.log(array);
+console.log(taula);
 // ● Modifiqui el valor emmagatzamat a la posició 0.
-
-array[0] = "Benvolgut";
+taula[0] = "Benvolgut";
+console.log(taula);
 
 // 21.3.- Fes un programa que faci el següent:
 // ● Defineixi una variable de tipus taula, amb aquests elements [23,45,98,73].
-array = [23,45,98,73];
+taula = [23,45,98,73];
 // ● Escrigui a la consola la suma dels elements situats a les posicions 0 i 2 de la taula.
-console.log(array[0] + array[2]);
+console.log(taula[0] + taula[2]);
 // ● Guardi a la posició 6 de la taula la suma dels elements
-array[6] = array[0] + array[2];
-let suma = array[0] + array[2];
-console.log(array);
+taula[6] = taula[0] + taula[2];
+// Escrigui a la consola el contingut de la taula. Què passa a la posició 5?
+let suma = taula[0] + taula[2];
+console.log(taula);
 //21.4.- Fes un programa que, donat un número (que demanarem per pantalla fent servir
 //prompt()) emmagatzemi a una taula el doble i el triple d’aquest número. Un cop fet, escriu la
 //taula a la consola.
@@ -77,11 +82,11 @@ console.log(suma);
 //21.9.- Fes un programa que crei una segona taula i emmagatzemi a ella tots els
 //valors de la taula, tot sumant-los 25 (així les tres primeres posicions de la nova taula
 //emmagatzemarien [48, 70, 88] Un cop fet haurà d’escriure la nova taula a la consola.
-let novaTaula = []; 
+let novataula = []; 
 for (let i = 0; i < taula.length; i++) {
-    novaTaula[i] = taula[i] + 25;
+    novataula[i] = taula[i] + 25;
 }
-console.log(novaTaula);     
+console.log(novataula);     
 
 //21.10.- Fes un programa que calculi la mitjana dels valors emmagatzemats a la taula
 //i l’escrigui a la consola (la mitjana es calcula sumant tots els valors i dividint pel
@@ -106,40 +111,40 @@ console.log("Valor mínim:", minim);
 
 //21.12.- Fes un programa que crei una nova taula on s’emmagatzemin només els
 //valors parells de la taula i que escrigui el contingut d’aquesta nova taula a la consola.
-let novaTaulaParells = [];  
+let novataulaparells = [];  
 for (let i = 0; i < taula.length; i++) {
     if (taula[i] % 2 === 0) {
-        novaTaulaParells.push(taula[i]);
+        novataulaparells.push(taula[i]);
     }
 }
-console.log(novaTaulaParells);      
+console.log(novataulaparells);      
 
 //21.13.- Fes un programa que demani a l’usuari un valor (fent servir prompt()) i
 //escrigui a la consola quants cops apareix aquest valor a la taula. 
-let valorBuscat = parseInt(prompt("Introdueix un valor per buscar a la taula:"));
+let valorbuscat = parseInt(prompt("Introdueix un valor per buscar a la taula:"));
 let comptador = 0;  
 for (let i = 0; i < taula.length; i++) {
-    if (taula[i] === valorBuscat) {
+    if (taula[i] === valorbuscat) {
         comptador++;
     }
 }
-console.log("El valor", valorBuscat, "apareix", comptador, "vegades a la taula.");
+console.log("El valor", valorbuscat, "apareix", comptador, "vegades a la taula.");
 
 //21.14.- Fes un programa que, donats dos arrays de números, comprovi si tots dos tenen el
 //mateix número d’elements i, si és així, crei una nova taula que contingui la suma de cada
 //element que es trobi a la mateixa posició als dos arrys.
 //Exemple: [1,2,3] + [2,3,4] → [3,5,7]
-let array1 = [1, 2, 3];
-let array2 = [2, 3, 4];     
+let taula1 = [1, 2, 3];
+let taula2 = [2, 3, 4];     
 
-if (array1.length === array2.length) {
-    let sumaArrays = [];    
+if (taula1.length === taula2.length) {
+    let sumataules = [];    
 
-    for (let i = 0; i < array1.length; i++) {
-        sumaArrays[i] = array1[i] + array2[i];
+    for (let i = 0; i < taula1.length; i++) {
+        sumataules[i] = taula1[i] + taula2[i];
     }           
 
-    console.log(sumaArrays);
+    console.log(sumataules);
 } else {
     console.log("Els arrays no tenen el mateix nombre d'elements.");
 }           
@@ -160,57 +165,55 @@ console.log(taulaInvertida);
 //21.16.- Fes un programa que demani un número a l’usuari (fent servir prompt()) i
 //escrigui a la consola si es troba o no a la taula. IMPORTANT: Fes-lo fent servir un
 //while de manera que si es troba l’element, s’acabi el bucle.
-let numeroBuscat = parseInt(prompt("Introdueix un número per buscar a la taula:"));
+let numerobuscat = parseInt(prompt("Introdueix un número per buscar a la taula:"));
 let trobat = false;  
-let i = 0;      
+let i= 0;      
 
 
 while (i < taula.length && !trobat) {
-    if (taula[i] === numeroBuscat) {
+    if (taula[i] === numerobuscat) {
         trobat = true;  
     }   i++;
 }   
 
 if (trobat) {
-    console.log("El número", numeroBuscat, "es troba a la taula.");
+    console.log("El número", numerobuscat, "es troba a la taula.");
 } else {
-    console.log("El número", numeroBuscat, "no es troba a la taula.");
+    console.log("El número", numerobuscat, "no es troba a la taula.");
 }       
 
 //21.17.- Fes un programa que demani un número a l’usuari (fent servir prompt()) i
 //escrigui a la consola si hi ha algun valor més gran a la taula. IMPORTANT: Fes-lo
 //fent servir un while de manera que si es troba que hi ha un element més gran,
 //s’acabi el bucle.
-
-let numeroComparar = parseInt(prompt("Introdueix un número per comparar amb la taula:"));
-let hiHaMesGran = false;  
+let numerocomparar = parseInt(prompt("Introdueix un número per comparar amb la taula:"));
+let hihamesgran = false;  
 let i = 0;      
 
-while (i < taula.length && !hiHaMesGran) {
-    if (taula[i] > numeroComparar) {
-        hiHaMesGran = true;  
+while (i < taula.length && !hihamesgran) {
+    if (taula[i] > numerocomparar) {
+        hihamesgran = true;  
     }   i++;    
 }
 
-if (hiHaMesGran) {
-    console.log("Hi ha algun valor més gran que", numeroComparar, "a la taula.");
+if (hihamesgran) {
+    console.log("Hi ha algun valor més gran que", numerocomparar, "a la taula.");
 } else {
-    console.log("No hi ha cap valor més gran que", numeroComparar, "a la taula.");
+    console.log("No hi ha cap valor més gran que", numerocomparar, "a la taula.");
 }       
 
 //21.18.- Fes un programa que escrigui “Sí” si el primer número de la taula està repetit
 //i “No” en cas contrari.
-
-let primerNumero = taula[0];
+let primernumero = taula[0];
 let estaRepetit = false;    
 for (let i = 1; i < taula.length; i++) {
-    if (taula[i] === primerNumero) {
+    if (taula[i] === primernumero) {
         estaRepetit = true;  
         break;  
     }
 }
 
-if (estaRepetit) {
+if (estarepetit) {
     console.log("Sí");
 } else {
     console.log("No");
@@ -219,7 +222,6 @@ if (estaRepetit) {
 //21.19.- Fes un programa que donades dues taules de la mateixa mida, crei una nova taula
 //amb la unió de les dues taules de manera alterna. Per exemple:
 //[1,2,3] unió [4,5,6] → [1,4,2,5,3,6]
-
 let taulaA = [1, 2, 3];
 let taulaB = [4, 5, 6];
 let taulaUnida = [];   
@@ -233,52 +235,49 @@ console.log(taulaUnida);
 
 //21.20.- Fes un programa que, donada una taula i un valor, crei una nova taula sense el valor
 //proporcionat.
+let taulaoriginal = [1, 2, 3, 4, 5, 3, 6];
+let valoraeliminar = parseInt(prompt("Introdueix un valor a eliminar de la taula:"));
+let taulafiltrada = [];     
 
-let taulaOriginal = [1, 2, 3, 4, 5, 3, 6];
-let valorAEliminar = parseInt(prompt("Introdueix un valor a eliminar de la taula:"));
-let taulaFiltrada = [];     
-
-for (let i = 0; i < taulaOriginal.length; i++) {
-    if (taulaOriginal[i] !== valorAEliminar) {
-        taulaFiltrada.push(taulaOriginal[i]);  
+for (let i = 0; i < taulaoriginal.length; i++) {
+    if (taulaoriginal[i] !== valoraeliminar) {
+        taulafiltrada.push(taulaoriginal[i]);  
     }   
 
 }
-console.log(taulaFiltrada);
+console.log(taulafiltrada);
 
 //21.21.- Fes un programa que, donada una taula i una posició, guardi a una altra taula la
 //taula inicial, però des de la posició donada fins al final. Per exemple
 //[1,2,3,5,6,7,8,9,0] i 4 → [6,7,8,9,0]
-
-let taulaInicial = [1, 2, 3, 5, 6, 7, 8, 9, 0];
+let taulainicial = [1, 2, 3, 5, 6, 7, 8, 9, 0];
 let posicio = parseInt(prompt("Introdueix una posició:"));
-let taulaResultat = [];
+let taularesultat = [];
 
-for (let i = posicio; i < taulaInicial.length; i++) {
-    taulaResultat.push(taulaInicial[i]);
+for (let i = posicio; i < taulainicial.length; i++) {
+    taularesultat.push(taulainicial[i]);
 }
 
-console.log(taulaResultat);
+console.log(taularesultat);
 
 //21.22.- Fes un programa que, donada una taula escrigui a la pantalla el primer número que
 //estigui repetit.
-
-let taulaDada = [1, 2, 3, 4, 2, 5, 6, 3];
-let primerRepetit = null;   
-for (let i = 0; i < taulaDada.length; i++) {
-    for (let j = i + 1; j < taulaDada.length; j++) {
-        if (taulaDada[i] === taulaDada[j]) {
-            primerRepetit = taulaDada[i];  
+let tauladada = [1, 2, 3, 4, 2, 5, 6, 3];
+let primerrepetit = null;   
+for (let i = 0; i < tauladada.length; i++) {
+    for (let j = i + 1; j < tauladada.length; j++) {
+        if (tauladada[i] === tauladada[j]) {
+            primerrepetit = tauladada[i];  
             break;  
         }
     }   
-    if (primerRepetit !== null) {
+    if (primerrepetit !== null) {
         break;
     }
 }                                   
 
-if (primerRepetit !== null) {
-    console.log("El primer número repetit és:", primerRepetit);
+if (primerrepetit !== null) {
+    console.log("El primer número repetit és:", primerrepetit);
 } else 
     {
      console.log("No hi ha números repetits a la taula.")
@@ -295,10 +294,8 @@ if (primerRepetit !== null) {
 //let miAuto = new Auto("Seat","Ibiza",90,2010,5000);
 //let otroAuto = new Auto("Opel","Astra",92,1995,500);
 //21.23.- Fes un programa que et digui el model i la marca del vehicle més antic.
-
-let autoMesAntic = miAuto;
-if (otroAuto.antiguedad < autoMesAntic.antiguedad) {
-    autoMesAntic = otroAuto;
+let automesantic = miAuto;
+if (otroAuto.antiguedad < automesantic.antiguedad) {
+    automesantic = otroAuto;
 }       
-
-console.log("El vehicle més antic és un " + autoMesAntic.marca + " " + autoMesAntic.modelo + " de l'any " + autoMesAntic.antiguedad);
+console.log("El vehicle més antic és un " + automesantic.marca + " " + automesantic.modelo + " de l'any " + automesantic.antiguedad);
