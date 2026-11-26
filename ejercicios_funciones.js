@@ -121,9 +121,44 @@ if (notaAC >= 5) {
 // Dividim la frase en paraules utilitzant espais i comes com a separadors    
 // Les frases només poden tenir lletres, comes, espais en blanc y el punt final. No tindrem en compte que pugui aparèixer cap altre caràcter. 
 // Per conèixer la llargària de la frase (quants caràcters té) podem fer servir la propietat length del Strings de JavaScript (consulteu https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Str ing/length per saber com fer-la servir) 
-// Inicialitzem el comptador de paraules de 5 lletres a 0   
+// Inicialitzem el comptador de paraules de 5 lletres a 0  
+let frase = prompt("Introdueix una frase acabada en punt:");
+function comptarParaulesDe5Lletres(frase) {
+    let paraules = frase.split(/[\s,]+/); // Dividim la frase en paraules utilitzant espais i comes com a separadors
+    let comptador = 0; // Inicialitzem el comptador de paraules de 5 lletres a 0
+    for (let i = 0; i < paraules.length; i++) {
+        if (paraules[i].length === 5) { // Comprovem si la paraula té 5 lletres
+            comptador++; // Incrementem el comptador si és així
+        }
+    }
+    return comptador; // Retornem el nombre de paraules de 5 lletres
+}       
+
 // Exercici 3.6
 // A partir de l’experiència del concurs anterior hem decidir fer un concurs semblant cada setmana. Però cada setmana volem comptar paraules amb diferents números de lletres. Així aquesta setmana seran paraules de 7 lletres, la setmana vinent de 4 i l’altre de 3. Què cal modificar a la funció per a que puguem fer servir la mateixa funció totes les setmanes? 
+let frase = prompt("Introdueix una frase acabada en punt:");
+function comptarParaulesDeNLLetres(frase, n) {
+    let paraules = frase.split(/[\s,]+/); // Dividim la frase en paraules utilitzant espais i comes com a separadors
+    let comptador = 0; // Inicialitzem el comptador de paraules de n lletres a 0
+    for (let i = 0; i < paraules.length; i++) {
+        if (paraules[i].length === n) { // Comprovem si la paraula té n lletres
+            comptador++; // Incrementem el comptador si és així
+        }
+    }
+    return comptador; // Retornem el nombre de paraules de n lletres
+}   
 
 // Exercici 3.7 
 // Un conegut que ha vist els nostres concursos ens ha preguntat com ho fem per comptar les paraules d’un determinat número de lletres. Un cop l’hem explicat ens ha demanat si li podíem fer una funció que, donada una frase, ens retorni a una taula quantes paraules hi ha amb 1, 2, 3, 4, 5, 6 o 7 lletres.
+let frase = prompt("Introdueix una frase acabada en punt:");
+function comptarParaulesPerLletres(frase) {
+    let paraules = frase.split(/[\s,]+/); // Dividim la frase en paraules utilitzant espais i comes com a separadors
+    let comptador = [0, 0, 0, 0, 0, 0, 0]; // Inicialitzem el comptador de paraules per lletres a 0
+    for (let i = 0; i < paraules.length; i++) {
+        let longitud = paraules[i].length; // Obtenim la longitud de la paraula
+        if (longitud >= 1 && longitud <= 7) { // Comprovem si la longitud està entre 1 i 7
+            comptador[longitud - 1]++; // Incrementem el comptador corresponent
+        }
+    }
+    return comptador; // Retornem la taula amb el nombre de paraules per lletres
+}   
